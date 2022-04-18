@@ -41,3 +41,10 @@ func Map[T any, S any](mapBy slice.ChangeElemFunc[T, S], arr []T) []S {
 func Any[T any](matchBy slice.MatchElemFunc[T], arr []T) bool {
 	return slice.Any(matchBy, arr)
 }
+
+// All function receives a matchBy function and a slice and returns true if all of the elements matches the matchBy.
+// The matchBy function receives an element and returns boolean
+// The slice type needs to be the same type of the mapby parameter
+func All[T any](matchBy slice.MatchElemFunc[T], arr []T) bool {
+	return slice.Any(matchBy, arr)
+}

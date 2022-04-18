@@ -5,11 +5,6 @@ import (
 	"testing"
 )
 
-type twoNums struct {
-	numA int
-	numB int
-}
-
 func TestFind_MatchFirstElement(t *testing.T) {
 	arr := []int{1, 2, 3, 4}
 	expected := 2
@@ -56,6 +51,11 @@ func TestFind_NoElementFoundString(t *testing.T) {
 }
 
 func TestFind_NoElementFoundStruct(t *testing.T) {
+	type twoNums struct {
+		numA int
+		numB int
+	}
+
 	arr := []twoNums{
 		{
 			numA: 1,
