@@ -20,19 +20,9 @@ To update Testify to the latest version, use `go get -u github.com/jonatan5524/g
 
 Contributing
 ============
+Thanks for contributing!
 
-Please feel free to submit issues, fork the repository and send pull requests!
-
-When submitting an issue, we ask that you please include a complete test function that demonstrates the issue.
-
-Before submiting PR make sure to format the code and run all the test cases, use:
-
-`make`
-
-To run 
-- unit test, test coverage, test race
-- go vet
-- gofmt
+make sure to read our [contributing guidelines](https://github.com/jonatan5524/gamda/blob/main/CONTRIBUTING.md)
 
 Acknowledgements
 -----------------
