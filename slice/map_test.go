@@ -1,10 +1,9 @@
-package gamda_test
+package gamda
 
 import (
+	"fmt"
 	"reflect"
 	"testing"
-
-	"github.com/jonatan5524/gamda"
 )
 
 type numBelowZero struct {
@@ -23,11 +22,24 @@ func convertToNumBelowZero(elem int) numBelowZero {
 	}
 }
 
+func ExampleMap() {
+	arr := []int{1, 2, 3, 4}
+
+	doubleElems := func(elem int) int {
+		return elem * 2
+	}
+
+	mappedArr := Map(doubleElems, arr)
+
+	fmt.Println(mappedArr)
+	// Output: [2 4 6 8]
+}
+
 func TestMap_ElementsDoubles(t *testing.T) {
 	arr := []int{1, 2, 3, 4}
 	expected := []int{2, 4, 6, 8}
 
-	actual := gamda.Map(doubleElems, arr)
+	actual := Map(doubleElems, arr)
 
 	if !reflect.DeepEqual(expected, actual) {
 		t.Errorf("TestMap_ElementsDoubles failed. Expected slice: %v, actual: %v", expected, actual)
@@ -55,7 +67,7 @@ func TestMap_ConvertElementType(t *testing.T) {
 		},
 	}
 
-	actual := gamda.Map(convertToNumBelowZero, arr)
+	actual := Map(convertToNumBelowZero, arr)
 
 	if !reflect.DeepEqual(expected, actual) {
 		t.Errorf("TestMap_ElementsDoubles failed. Expected slice: %v, actual: %v", expected, actual)
@@ -66,7 +78,7 @@ func TestMap_EmptySlice(t *testing.T) {
 	arr := []int{}
 	expected := []int{}
 
-	actual := gamda.Map(doubleElems, arr)
+	actual := Map(doubleElems, arr)
 
 	if !reflect.DeepEqual(expected, actual) {
 		t.Errorf("TestMap_EmptySlice failed. Expected slice: %v, actual: %v", expected, actual)
