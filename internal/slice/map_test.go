@@ -1,4 +1,4 @@
-package gamda
+package slice
 
 import (
 	"fmt"
