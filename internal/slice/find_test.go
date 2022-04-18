@@ -20,7 +20,7 @@ func TestFind_MatchFirstElement(t *testing.T) {
 
 	actual := Find(isEven, arr)
 
-	if !reflect.DeepEqual(expected, actual) {
+	if expected != actual {
 		t.Errorf("TestFind_MatchFirstElement failed. Expected slice: %v, actual: %v", expected, actual)
 	}
 }
@@ -35,7 +35,7 @@ func TestFind_NoElementFoundInt(t *testing.T) {
 
 	actual := Find(isEven, arr)
 
-	if !reflect.DeepEqual(expected, actual) {
+	if expected != actual {
 		t.Errorf("TestFind_NoElementFound failed. Expected slice: %v, actual: %v", expected, actual)
 	}
 }
@@ -50,7 +50,7 @@ func TestFind_NoElementFoundString(t *testing.T) {
 
 	actual := Find(isRepo, arr)
 
-	if !reflect.DeepEqual(expected, actual) {
+	if expected != actual {
 		t.Errorf("TestFind_NoElementFound failed. Expected slice: %v, actual: %v", expected, actual)
 	}
 }
@@ -93,7 +93,7 @@ func TestFind_EmptySlice(t *testing.T) {
 
 	actual := Find(isEven, arr)
 
-	if !reflect.DeepEqual(expected, actual) {
+	if expected != actual {
 		t.Errorf("TestFind_NoElementFound failed. Expected slice: %v, actual: %v", expected, actual)
 	}
 }

@@ -13,9 +13,9 @@ func Adjust[T any](changeIndex int, changeElem slice.ChangeElemFunc[T, T], arr [
 	return slice.Adjust(changeIndex, changeElem, arr)
 }
 
-// Filter function receives a filterby function and a slice and returns filtered slice by filterby.
-// The filterby function receives an element and returns boolean
-// The slice type needs to be the same type of the filterby parameter
+// Filter function receives a filterBy function and a slice and returns filtered slice by filterBy.
+// The filterBy function receives an element and returns boolean
+// The slice type needs to be the same type of the filterBy parameter
 func Filter[T any](filterBy slice.MatchElemFunc[T], arr []T) []T {
 	return slice.Filter(filterBy, arr)
 }
@@ -28,9 +28,16 @@ func Find[T any](findBy slice.MatchElemFunc[T], arr []T) T {
 	return slice.Find(findBy, arr)
 }
 
-// Map function receives a mapby function and a slice and returns the mapped slice by mapby.
-// The mapby function receives an element and returns a new element by mapby
-// The slice type needs to be the same type of the mapby parameter
+// Map function receives a mapBy function and a slice and returns the mapped slice by mapBy.
+// The mapBy function receives an element and returns a new element by mapBy
+// The slice type needs to be the same type of the mapBy parameter
 func Map[T any, S any](mapBy slice.ChangeElemFunc[T, S], arr []T) []S {
 	return slice.Map(mapBy, arr)
+}
+
+// Any function receives a matchBy function and a slice and returns true if one of the elements matches the matchBy.
+// The matchBy function receives an element and returns boolean
+// The slice type needs to be the same type of the mapby parameter
+func Any[T any](matchBy slice.MatchElemFunc[T], arr []T) bool {
+	return slice.Any(matchBy, arr)
 }

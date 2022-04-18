@@ -71,3 +71,16 @@ func ExampleMap() {
 	fmt.Println(mappedArr)
 	// Output: [2 4 6 8]
 }
+
+func ExampleAny() {
+	arr := []int{1, 2, 3, 5}
+
+	evenElem := func(elem int) bool {
+		return elem%2 == 0
+	}
+
+	mappedArr := Any(evenElem, arr)
+
+	fmt.Println(mappedArr)
+	// Output: true
+}
