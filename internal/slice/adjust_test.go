@@ -1,26 +1,12 @@
 package slice
 
 import (
-	"fmt"
 	"reflect"
 	"testing"
 )
 
 func increaseElem(elem int) int {
 	return elem + 1
-}
-
-func ExampleAdjust() {
-	arr := []int{1, 2, 3, 4}
-
-	increaseElem := func(elem int) int {
-		return elem + 1
-	}
-
-	newArr := Adjust(1, increaseElem, arr)
-
-	fmt.Println(newArr)
-	// Output: [1 3 3 4]
 }
 
 func TestAdjust_ElementsIncrease(t *testing.T) {

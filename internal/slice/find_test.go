@@ -1,7 +1,6 @@
 package slice
 
 import (
-	"fmt"
 	"reflect"
 	"testing"
 )
@@ -9,32 +8,6 @@ import (
 type twoNums struct {
 	numA int
 	numB int
-}
-
-func ExampleFind() {
-	arr := []twoNums{
-		{
-			numA: 1,
-			numB: 2,
-		},
-		{
-			numA: 3,
-			numB: 4,
-		},
-		{
-			numA: 5,
-			numB: 6,
-		},
-	}
-
-	numBFour := func(elem twoNums) bool {
-		return elem.numB == 4
-	}
-
-	objFind := Find(numBFour, arr)
-
-	fmt.Println(objFind)
-	// Output: {3 4}
 }
 
 func TestFind_MatchFirstElement(t *testing.T) {

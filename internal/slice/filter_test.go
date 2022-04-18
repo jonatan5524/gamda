@@ -1,26 +1,12 @@
 package slice
 
 import (
-	"fmt"
 	"reflect"
 	"testing"
 )
 
 func filterByEven(elem int) bool {
 	return elem%2 == 0
-}
-
-func ExampleFilter() {
-	arr := []int{1, 2, 3, 4, 5, 6}
-
-	filterByEven := func(elem int) bool {
-		return elem%2 == 0
-	}
-
-	filteredArr := Filter(filterByEven, arr)
-
-	fmt.Println(filteredArr)
-	// Output: [2 4 6]
 }
 
 func TestFilter_ElementsMatch(t *testing.T) {

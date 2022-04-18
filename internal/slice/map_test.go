@@ -1,7 +1,6 @@
 package slice
 
 import (
-	"fmt"
 	"reflect"
 	"testing"
 )
@@ -20,19 +19,6 @@ func convertToNumBelowZero(elem int) numBelowZero {
 		number:    elem,
 		belowZero: elem < 0,
 	}
-}
-
-func ExampleMap() {
-	arr := []int{1, 2, 3, 4}
-
-	doubleElems := func(elem int) int {
-		return elem * 2
-	}
-
-	mappedArr := Map(doubleElems, arr)
-
-	fmt.Println(mappedArr)
-	// Output: [2 4 6 8]
 }
 
 func TestMap_ElementsDoubles(t *testing.T) {
