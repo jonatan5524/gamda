@@ -1,6 +1,7 @@
 # gamda
 Pratical functional programming library in go.
 
+[![Go Reference](https://pkg.go.dev/badge/github.com/jonatan5524/gamda.svg)](https://pkg.go.dev/github.com/jonatan5524/gamda)
 ------
 
 Installation
