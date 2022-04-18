@@ -97,3 +97,17 @@ func ExampleAll() {
 	fmt.Println(mappedArr)
 	// Output: true
 }
+
+func ExampleForeach() {
+	arr := []int{1, 2, 3, 4}
+
+	newArr := []int{}
+	doubleSlice := func(elem int) {
+		newArr = append(newArr, elem*2)
+	}
+
+	Foreach(doubleSlice, arr)
+
+	fmt.Println(newArr)
+	// Output: [2 4 6 8]
+}
