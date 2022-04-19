@@ -17,9 +17,21 @@ func TestConcat_CombineSlices(t *testing.T) {
 	}
 }
 
-func TestConcat_EmptySlice(t *testing.T) {
+func TestConcat_EmptySecondSlice(t *testing.T) {
 	arr := []int{1, 2, 3}
 	secondArr := []int{}
+	expected := []int{1, 2, 3}
+
+	actual := Concat(arr, secondArr)
+
+	if !reflect.DeepEqual(expected, actual) {
+		t.Errorf("TestConcat_CombineSlices failed. Expected slice: %v, actual: %v", expected, actual)
+	}
+}
+
+func TestConcat_EmptyFirstSlice(t *testing.T) {
+	arr := []int{}
+	secondArr := []int{1, 2, 3}
 	expected := []int{1, 2, 3}
 
 	actual := Concat(arr, secondArr)

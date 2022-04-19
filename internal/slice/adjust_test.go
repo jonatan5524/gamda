@@ -55,16 +55,11 @@ func TestAdjust_OutOfBoundsPositiveIndex(t *testing.T) {
 
 func TestAdjust_NotMutateOriginalSlice(t *testing.T) {
 	arr := []int{1, 2, 3, 4}
-	expected := []int{1, 3, 3, 4}
 	beforeAdjustArr := []int{1, 2, 3, 4}
 
-	actual := Adjust(1, increaseElem, arr)
-
-	if !reflect.DeepEqual(expected, actual) {
-		t.Errorf("TestAdjust_NotMutateOriginalSlice failed. Expected slice: %v, actual: %v", expected, actual)
-	}
+	Adjust(1, increaseElem, arr)
 
 	if !reflect.DeepEqual(arr, beforeAdjustArr) {
-		t.Errorf("TestAdjust_NotMutateOriginalSlice failed. Expected slice: %v, actual: %v", expected, actual)
+		t.Errorf("TestAdjust_NotMutateOriginalSlice failed. Expected slice: %v, actual: %v", beforeAdjustArr, arr)
 	}
 }
