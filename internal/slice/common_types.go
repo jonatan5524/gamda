@@ -1,4 +1,4 @@
 package slice
 
-type MatchElemFunc[T any] func(elem T) bool
-type ChangeElemFunc[T any, S any] func(elem T) S
+type MatchElemFunc[T any] func(T) bool
+type ChangeElemFunc[T any, S any] func(T) S
