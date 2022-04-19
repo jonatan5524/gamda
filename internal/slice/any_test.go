@@ -15,7 +15,7 @@ func TestAny_MatchFirstElement(t *testing.T) {
 	actual := Any(isEven, arr)
 
 	if expected != actual {
-		t.Errorf("TestFind_MatchFirstElement failed. Expected slice: %v, actual: %v", expected, actual)
+		t.Errorf("TestAny_MatchFirstElement failed. Expected slice: %v, actual: %v", expected, actual)
 	}
 }
 
@@ -48,7 +48,7 @@ func TestAny_MatchFirstElementStruct(t *testing.T) {
 	actual := Any(isAThree, arr)
 
 	if expected != actual {
-		t.Errorf("TestFind_MatchFirstElement failed. Expected slice: %v, actual: %v", expected, actual)
+		t.Errorf("TestAny_MatchFirstElementStruct failed. Expected slice: %v, actual: %v", expected, actual)
 	}
 }
 
@@ -63,7 +63,7 @@ func TestAny_NoElementMatch(t *testing.T) {
 	actual := Any(isEven, arr)
 
 	if expected != actual {
-		t.Errorf("TestFind_NoElementFound failed. Expected slice: %v, actual: %v", expected, actual)
+		t.Errorf("TestAny_NoElementMatch failed. Expected slice: %v, actual: %v", expected, actual)
 	}
 }
 
@@ -78,6 +78,6 @@ func TestAny_EmptySlice(t *testing.T) {
 	actual := Any(isEven, arr)
 
 	if expected != actual {
-		t.Errorf("TestFind_NoElementFound failed. Expected slice: %v, actual: %v", expected, actual)
+		t.Errorf("TestAny_EmptySlice failed. Expected slice: %v, actual: %v", expected, actual)
 	}
 }

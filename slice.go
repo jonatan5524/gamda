@@ -56,3 +56,9 @@ func All[T any](matchBy slice.MatchElemFunc[T], arr []T) bool {
 func Foreach[T any](action func(T), arr []T) []T {
 	return slice.Foreach(action, arr)
 }
+
+// Concat function receives 2 slices and combine them together,
+// the function returns the combined slice
+func Concat[T any](arr []T, secondArr []T) []T {
+	return append(arr, secondArr...)
+}

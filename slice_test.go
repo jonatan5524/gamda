@@ -111,3 +111,13 @@ func ExampleForeach() {
 	fmt.Println(newArr)
 	// Output: [2 4 6 8]
 }
+
+func ExampleConcat() {
+	arr := []int{1, 2, 3}
+	secondArr := []int{3, 5, 6}
+
+	combinedArr := Concat(arr, secondArr)
+
+	fmt.Println(combinedArr)
+	// Output: [1 2 3 3 5 6]
+}
