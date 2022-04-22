@@ -9,3 +9,8 @@ import "github.com/jonatan5524/gamda/internal/logic"
 func AllPass[T any](checks []logic.CheckPass[T]) func(...T) bool {
 	return logic.AllPass(checks)
 }
+
+// And function recevie 2 boolean arguments and return the && output of those 2 values
+func And(a bool, b bool) bool {
+	return a && b
+}
