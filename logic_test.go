@@ -16,3 +16,11 @@ func ExampleAllPass() {
 	fmt.Println(checkAllPass(7, 9, 11))
 	// Output: true
 }
+
+func ExampleAnd() {
+	ret := And(true, false)
+	ret2 := And(true, true)
+
+	fmt.Println(ret, ret2)
+	// Output: false true
+}
