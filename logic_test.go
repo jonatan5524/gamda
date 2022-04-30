@@ -17,6 +17,16 @@ func ExampleAllPass() {
 	// Output: true
 }
 
+func ExampleAnyPass() {
+	checkOdd := func(x int) bool { return x%2 != 0 }
+	checkLessThanTwenty := func(x int) bool { return x < 20 }
+
+	checkAnyPass := AnyPass([]logic.CheckPass[int]{checkOdd, checkLessThanTwenty})
+
+	fmt.Println(checkAnyPass(4, 20, 22))
+	// Output: true
+}
+
 func ExampleAnd() {
 	ret := And(true, false)
 	ret2 := And(true, true)
