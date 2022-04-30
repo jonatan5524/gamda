@@ -121,3 +121,10 @@ func ExampleConcat() {
 	fmt.Println(combinedArr)
 	// Output: [1 2 3 3 5 6]
 }
+
+func ExampleAperture() {
+	arr := []int{1, 2, 3, 4, 5, 6, 7}
+
+	fmt.Println(Aperture(3, arr))
+	// Output: [[1 2 3] [2 3 4] [3 4 5] [4 5 6] [5 6 7]]
+}

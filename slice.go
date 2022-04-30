@@ -62,3 +62,9 @@ func Foreach[T any](action func(T), arr []T) []T {
 func Concat[T any](arr []T, secondArr []T) []T {
 	return append(arr, secondArr...)
 }
+
+// Aperture function receives tuple size and a slice,
+// returns new slice composed of n-tuples with tuple size
+func Aperture[T any](tuple_len int, arr []T) [][]T {
+	return slice.Aperture(tuple_len, arr)
+}
