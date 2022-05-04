@@ -5,13 +5,10 @@ COVER_OUT=coverage.out
 
 default: test_all vet fmt
 
-test_all: unit_test test_race test_cover
+test_all: unit_test test_cover
 
 unit_test:
 	go test -v $(DIR)
-
-test_race:
-	go test -v -race $(DIR)
 
 test_cover:
 	go test $(DIR) -coverprofile $(COVER_OUT)
