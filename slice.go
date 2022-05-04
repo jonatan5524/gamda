@@ -68,3 +68,9 @@ func Concat[T any](arr []T, secondArr []T) []T {
 func Aperture[T any](tuple_len int, arr []T) [][]T {
 	return slice.Aperture(tuple_len, arr)
 }
+
+// Append Funcion receives an element and a slice,
+// append to the end of the slice an element
+func Append[T any](element T, arr []T) []T {
+	return slice.Append(element, arr)
+}
