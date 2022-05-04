@@ -18,7 +18,7 @@ func AnyPass[T any](checks []logic.CheckPass[T]) func(...T) bool {
 	return logic.AnyPass(checks)
 }
 
-// And function recevie 2 boolean arguments and return the && output of those 2 values
+// And function receives 2 boolean arguments and return the && output of those 2 values
 func And(a bool, b bool) bool {
 	return a && b
 }
