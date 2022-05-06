@@ -1,6 +1,6 @@
 package slice
 
-func All[T any](matchBy MatchElemFunc[T], arr []T) bool {
+func All[T ~[]E, E any](matchBy MatchElemFunc[E], arr T) bool {
 	for _, elem := range arr {
 		if !matchBy(elem) {
 			return false

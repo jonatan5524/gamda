@@ -1,7 +1,7 @@
 package slice
 
-func Map[T any, S any](mapBy ChangeElemFunc[T, S], arr []T) []S {
-	mapArr := make([]S, 0)
+func Map[T ~[]E, E any, S ~[]D, D any](mapBy ChangeElemFunc[E, D], arr T) S {
+	mapArr := make(S, 0)
 
 	for _, elem := range arr {
 		mapArr = append(mapArr, mapBy(elem))

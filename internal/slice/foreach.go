@@ -1,6 +1,6 @@
 package slice
 
-func Foreach[T any](action func(T), arr []T) []T {
+func Foreach[T ~[]E, E any](action func(E), arr T) T {
 	for _, elem := range arr {
 		action(elem)
 	}

@@ -25,7 +25,7 @@ func TestMap_ElementsDoubles(t *testing.T) {
 	arr := []int{1, 2, 3, 4}
 	expected := []int{2, 4, 6, 8}
 
-	actual := Map(doubleElems, arr)
+	actual := Map[[]int, int, []int](doubleElems, arr)
 
 	if !reflect.DeepEqual(expected, actual) {
 		t.Errorf("TestMap_ElementsDoubles failed. Expected slice: %v, actual: %v", expected, actual)
@@ -53,7 +53,7 @@ func TestMap_ConvertElementType(t *testing.T) {
 		},
 	}
 
-	actual := Map(convertToNumBelowZero, arr)
+	actual := Map[[]int, int, []numBelowZero](convertToNumBelowZero, arr)
 
 	if !reflect.DeepEqual(expected, actual) {
 		t.Errorf("TestMap_ElementsDoubles failed. Expected slice: %v, actual: %v", expected, actual)
@@ -64,7 +64,7 @@ func TestMap_EmptySlice(t *testing.T) {
 	arr := []int{}
 	expected := []int{}
 
-	actual := Map(doubleElems, arr)
+	actual := Map[[]int, int, []int](doubleElems, arr)
 
 	if !reflect.DeepEqual(expected, actual) {
 		t.Errorf("TestMap_EmptySlice failed. Expected slice: %v, actual: %v", expected, actual)

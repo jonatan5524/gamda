@@ -1,7 +1,7 @@
 package slice
 
-func Filter[T any](filterBy MatchElemFunc[T], arr []T) []T {
-	filteredArr := []T{}
+func Filter[T ~[]E, E any](filterBy MatchElemFunc[E], arr T) T {
+	filteredArr := T{}
 
 	for _, elem := range arr {
 		if filterBy(elem) {

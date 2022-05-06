@@ -1,7 +1,7 @@
 package slice
 
-func Aperture[T any](tuple_len int, arr []T) [][]T {
-	newArr := [][]T{}
+func Aperture[T ~[]E, E any](tuple_len int, arr T) []T {
+	newArr := []T{}
 
 	if tuple_len > len(arr) {
 		return newArr
