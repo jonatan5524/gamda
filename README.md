@@ -1,6 +1,8 @@
 # gamda
 Pratical functional programming library in go.
 
+Building a Ramda.js like library in go
+
 [![Go Reference](https://pkg.go.dev/badge/github.com/jonatan5524/gamda.svg)](https://pkg.go.dev/github.com/jonatan5524/gamda)
 [![Go Report Card](https://goreportcard.com/badge/github.com/jonatan5524/gamda)](https://goreportcard.com/report/github.com/jonatan5524/gamda)
 ------
