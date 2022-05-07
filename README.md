@@ -7,6 +7,14 @@ Building a Ramda.js like library in go
 [![Go Report Card](https://goreportcard.com/badge/github.com/jonatan5524/gamda)](https://goreportcard.com/report/github.com/jonatan5524/gamda)
 ------
 
+# Disclaimer
+I have stopped the work on this repository after researching the future of functional programming in Go and understanding that FP is not suited to the Go language. I am leaving this repo open for testing and keep playing with the generic feature in Go.
+
+If anyone think otherwise or have an opinion on the subject you are more than welcome to comment on the discussion:  
+[Discussion about the subject](https://www.reddit.com/r/golang/comments/ujnnyq/practical_functional_go_ramdajs_in_go/)
+
+-----------
+
 Installation
 ============
 
